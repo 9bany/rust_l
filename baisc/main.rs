@@ -15,7 +15,7 @@ fn ref_func(a: &i64) -> i64 {
     *a + 1
 }
 
-fn main() {
+fn basic() {
     let mut answer = 0;
     println!("Hello {}", answer);
 
@@ -35,5 +35,17 @@ fn main() {
 
     let x_pi = 2.0 * std::f64::consts::PI;
     println!("the value of double PI: {}", x_pi);
-    
+}
+
+fn arr() {
+
+    let a = [1,2,3,4];
+    for i in a {
+        println!("{}", i);
+    }
+}
+
+fn main() {
+    // basic();
+    arr();
 }
