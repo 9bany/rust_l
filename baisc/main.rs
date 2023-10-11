@@ -32,5 +32,8 @@ fn main() {
     println!("the value of a before change: {}", a);
     let new_value = ref_func(&a);
     println!("the value of a before plus 1: {}", new_value);
+
+    let x_pi = 2.0 * std::f64::consts::PI;
+    println!("the value of double PI: {}", x_pi);
     
 }
