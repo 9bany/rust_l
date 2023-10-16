@@ -1,4 +1,28 @@
 
+
+struct Person {
+    first_name: String,
+    last_name: String
+}
+
+
+impl Person {
+
+    fn new(first: &str, name: &str) -> Person {
+        Person {
+            first_name: first.to_string(),
+            last_name: name.to_string()
+        }
+    }
+
+}
+
+impl Person {
+    fn full_name(&self) -> String {
+        return format!{"{} {}", self.first_name, self.last_name}
+    }
+}
+
 // normal func
 fn sum(a: i64, b: i64) -> i64 {
     return a + b;
@@ -48,4 +72,7 @@ fn arr() {
 fn main() {
     // basic();
     arr();
+    
+    let p = Person::new("John","Smith");
+    println!("person {} ", p.full_name());
 }
